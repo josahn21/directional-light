@@ -1,13 +1,13 @@
 <html>
   <head>
-    <script src = "p5.min.js"></script>
+    <script src = "p5/p5.min.js"></script>
   </head>
   <body>
     <script>
     var img;
     
   function preload() {
-  img = loadImage("donut.jpeg");
+  img = loadImage("sprinkles.jpg");
   }
   
   function setup() {
@@ -19,10 +19,11 @@
     var locX = mouseX - width/2;
     var locY = mouseY - height/2;
     //directionalLight(red, gree, blue, x-axis, y-axis, z-axis)
-    directionalLight(255, 255, 0, -locX, -locY, -175);
+    directionalLight(255, 255, 255, -locX, -locY, -175);
     specularMaterial(250);
   
     //torus(radius of the ring, the radius, deatailx, detaily)
+  texture(img);
     torus(200, 64, 30, 30);
 }
     </script>
